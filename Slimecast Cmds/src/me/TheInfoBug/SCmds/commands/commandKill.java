@@ -23,7 +23,7 @@ public class commandKill implements CommandExecutor {
 			if(sender instanceof Player){
 				Player p = (Player) sender;
 				if(p.isOp() || p.hasPermission("scmds.kill")){
-					if(!(args.length < 0)){
+					if(!(args.length < 1)){
 						Player t = Bukkit.getPlayer(args[0]);
 						if(t.isOnline()){
 							t.setHealth(0);

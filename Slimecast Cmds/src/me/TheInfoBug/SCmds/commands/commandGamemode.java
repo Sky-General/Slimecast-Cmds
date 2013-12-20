@@ -23,7 +23,7 @@ public class commandGamemode implements CommandExecutor {
 			if(sender instanceof Player){
 				Player p = (Player) sender;
 				if(p.isOp() || p.hasPermission("scmds.gm")){
-					if(!(args.length < 0)){
+					if(!(args.length < 1)){
 						if(args[0].equalsIgnoreCase("s") || args[0].equals("0")){
 							p.setGameMode(GameMode.SURVIVAL);
 						}else if(args[0].equalsIgnoreCase("c") || args[0].equals("1")){

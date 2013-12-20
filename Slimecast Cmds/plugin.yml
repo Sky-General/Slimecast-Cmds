@@ -10,3 +10,6 @@ commands:
   gm:
     description: Change your gamemode
     usage: /gm (gamemode)
+  kill:
+    description: Kill a player
+    usage: /kill (player)
