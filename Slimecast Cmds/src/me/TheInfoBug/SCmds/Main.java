@@ -1,7 +1,25 @@
 package me.TheInfoBug.SCmds;
 
-public class Main {
+import me.TheInfoBug.SCmds.commands.commandClear;
 
-	//Test commit
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin{
+
+	PluginManager pm = Bukkit.getPluginManager();
 	
+	public void onEnable(){
+		
+		setCommands();
+		
+	}
+	
+	
+	public void setCommands(){
+		
+		getCommand("ci").setExecutor(new commandClear(this));
+		
+	}
 }
