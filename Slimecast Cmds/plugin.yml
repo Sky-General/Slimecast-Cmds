@@ -1,0 +1,12 @@
+name: Slimecast Cmds
+author: TheInfoBug
+version: 1
+description: Slimecast Commands made by TheInfoBug
+main: me.TheInfoBug.SCmds.Main
+commands:
+  ci:
+    description: Clear your inv
+    usage: /ci
+  gm:
+    description: Change your gamemode
+    usage: /gm (gamemode)
