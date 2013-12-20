@@ -2,6 +2,7 @@ package me.TheInfoBug.SCmds;
 
 import me.TheInfoBug.SCmds.commands.commandClear;
 import me.TheInfoBug.SCmds.commands.commandGamemode;
+import me.TheInfoBug.SCmds.commands.commandKill;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
@@ -22,6 +23,7 @@ public class Main extends JavaPlugin{
 		
 		getCommand("ci").setExecutor(new commandClear(this));
 		getCommand("gm").setExecutor(new commandGamemode(this));
+		getCommand("kill").setExecutor(new commandKill(this));
 		
 	}
 }
