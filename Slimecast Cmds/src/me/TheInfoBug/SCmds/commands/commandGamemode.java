@@ -11,6 +11,8 @@ import org.bukkit.entity.Player;
 
 public class commandGamemode implements CommandExecutor {
 
+	//Working [Tested]
+	
 	Main plugin;
 	
 	public commandGamemode(Main main){

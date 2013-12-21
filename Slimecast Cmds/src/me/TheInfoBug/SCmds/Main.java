@@ -27,5 +27,6 @@ public class Main extends JavaPlugin{
 		getCommand("kill").setExecutor(new commandKill(this));
 		getCommand("killall").setExecutor(new commandKillall(this));
 		
+		
 	}
 }

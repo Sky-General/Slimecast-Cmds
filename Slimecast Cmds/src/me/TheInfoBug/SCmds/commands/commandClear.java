@@ -11,6 +11,8 @@ import org.bukkit.inventory.ItemStack;
 
 public class commandClear implements CommandExecutor {
 
+	//Working [Tested]
+	
 	Main plugin;
 	
 	public commandClear(Main main){

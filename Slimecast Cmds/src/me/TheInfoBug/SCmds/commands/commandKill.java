@@ -11,6 +11,8 @@ import org.bukkit.entity.Player;
 
 public class commandKill implements CommandExecutor {
 
+	//Working [Tested]
+	
 	Main plugin;
 	
 	public commandKill(Main main){
