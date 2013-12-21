@@ -2,6 +2,7 @@ package me.TheInfoBug.SCmds.commands;
 
 import me.TheInfoBug.SCmds.Main;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -24,6 +25,7 @@ public class commandClear implements CommandExecutor {
 			if(sender instanceof Player){
 				Player p = (Player) sender;
 				p.getInventory().setContents(empty);
+				p.sendMessage(ChatColor.GREEN + "Inventory Cleared!");
 			}else{
 				sender.sendMessage("Only players may use this command!");
 			}

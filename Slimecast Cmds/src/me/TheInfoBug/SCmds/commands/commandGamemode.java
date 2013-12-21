@@ -26,18 +26,20 @@ public class commandGamemode implements CommandExecutor {
 					if(!(args.length < 1)){
 						if(args[0].equalsIgnoreCase("s") || args[0].equals("0")){
 							p.setGameMode(GameMode.SURVIVAL);
+							sender.sendMessage(ChatColor.YELLOW + "[" + ChatColor.GREEN + "SCmds" + ChatColor.YELLOW + "] " + ChatColor.YELLOW + "Gamemode: " + ChatColor.GREEN + "Survival");
 						}else if(args[0].equalsIgnoreCase("c") || args[0].equals("1")){
 							p.setGameMode(GameMode.CREATIVE);
+							sender.sendMessage(ChatColor.YELLOW + "[" + ChatColor.GREEN + "SCmds" + ChatColor.YELLOW + "] " + ChatColor.YELLOW + "Gamemode: " + ChatColor.GREEN + "Creative");
 						}else{
-							sender.sendMessage(ChatColor.GOLD + "Usage: /gm (GameMode)");
+							sender.sendMessage(ChatColor.YELLOW + "Usage: /gm (GameMode)");
 						}
 						
 					}else{
-						sender.sendMessage(ChatColor.GOLD + "Usage: /gm (GameMode)");
+						sender.sendMessage(ChatColor.YELLOW + "Usage: /gm (GameMode)");
 					}
 					
 				}else{
-					sender.sendMessage(ChatColor.GOLD + "[" + ChatColor.GREEN + "SCmds" + ChatColor.GOLD + "] " + ChatColor.GREEN + "You may not use this command!");
+					sender.sendMessage(ChatColor.YELLOW + "[" + ChatColor.GREEN + "SCmds" + ChatColor.YELLOW + "] " + ChatColor.YELLOW + "You may not use this command!");
 				}
 				
 			}else{

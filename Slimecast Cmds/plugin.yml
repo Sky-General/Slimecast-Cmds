@@ -13,3 +13,6 @@ commands:
   kill:
     description: Kill a player
     usage: /kill (player)
+  killall:
+    description: Kill all mobs nearby
+    usage: /killall

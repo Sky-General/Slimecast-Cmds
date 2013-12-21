@@ -25,17 +25,21 @@ public class commandKill implements CommandExecutor {
 				if(p.isOp() || p.hasPermission("scmds.kill")){
 					if(!(args.length < 1)){
 						Player t = Bukkit.getPlayer(args[0]);
-						if(t.isOnline()){
+						if(t != null){
 							t.setHealth(0);
-							p.sendMessage(ChatColor.GOLD + "[" + ChatColor.GREEN + "SCmds" + ChatColor.GOLD + "] " + ChatColor.GREEN + t.getDisplayName() + " has been killed");
+							p.sendMessage(ChatColor.YELLOW + "[" + ChatColor.GREEN + "SCmds" + ChatColor.YELLOW + "] " + ChatColor.GREEN + t.getDisplayName() + " has been killed");
+							t.sendMessage(ChatColor.YELLOW + "[" + ChatColor.GREEN + "SCmds" + ChatColor.YELLOW + "] " + ChatColor.GREEN + "You were killed!");
+						}else{
+							sender.sendMessage(ChatColor.YELLOW + "[" + ChatColor.GREEN + "SCmds" + ChatColor.YELLOW + "] " + ChatColor.GREEN + "Player not found!");
 						}
 						
 					}else{
-						sender.sendMessage(ChatColor.GOLD + "Usage: /kill (Player)");
+						p.setHealth(0);
+						sender.sendMessage(ChatColor.YELLOW + "[" + ChatColor.GREEN + "SCmds" + ChatColor.YELLOW + "] " + ChatColor.GREEN + "You were killed!");
 					}
 
 				}else{
-					sender.sendMessage(ChatColor.GOLD + "[" + ChatColor.GREEN + "SCmds" + ChatColor.GOLD + "] " + ChatColor.GREEN + "You may not use this command!");
+					sender.sendMessage(ChatColor.YELLOW + "[" + ChatColor.GREEN + "SCmds" + ChatColor.YELLOW + "] " + ChatColor.GREEN + "You may not use this command!");
 				}
 				
 			}else{
