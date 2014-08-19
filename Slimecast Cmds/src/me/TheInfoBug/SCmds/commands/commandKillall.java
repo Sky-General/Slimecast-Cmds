@@ -28,7 +28,7 @@ public class commandKillall implements CommandExecutor {
 				if(p.isOp() || p.hasPermission("scmds.killall")){
 					for(Entity entity : p.getNearbyEntities(2000, 2000, 2000)){
 						if((!(entity instanceof Player)) && entity instanceof LivingEntity || (!(entity instanceof Player)) && entity instanceof Entity){
-							((LivingEntity)entity).setHealth(0);
+							entity.remove();
 						}
 					}
 					sender.sendMessage(ChatColor.YELLOW + "[" + ChatColor.GREEN + "SCmds" + ChatColor.YELLOW + "] " + ChatColor.YELLOW + "All Mobs killed!");
